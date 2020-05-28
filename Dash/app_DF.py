@@ -42,7 +42,7 @@ My_db = pd.DataFrame(list(DF_db.items()),columns=['Name','Description'])
 My_db['Description'] = My_db['Description'].apply(' '.join)
 
 #np.save('cosine_similarities.npy', cosine_similarities )
-cosine_similarities=np.load('cosine_similarities.npy')
+#cosine_similarities=np.load('cosine_similarities.npy')
 
 tf = TfidfVectorizer(analyzer = 'word', ngram_range = (1, 2), min_df = 0, stop_words = 'english')
 tfidf_matrix = tf.fit_transform(My_db['Description'])
